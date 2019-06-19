@@ -18,6 +18,18 @@ class TiendaController extends Controller
         return view('vistas.productos', array('arrayProductos'=>$this->arrayProductos));
     }
 
+    //Controlador de la vista Lista
+    public function getLista()
+    {
+        return view('vistas.lista');
+    }
+
+    //Controlador de la vista Reserva
+    public function getReserva()
+    {
+        return view('vistas.reserva');
+    }
+
     //Controlador de la vista Create
     public function getCreate()
     {

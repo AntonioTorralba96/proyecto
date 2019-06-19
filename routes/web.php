@@ -17,9 +17,9 @@ Route::get('/tiendas', 'TiendaController@getTienda');
 
 Route::get('/productos/{id}', 'TiendaController@getProducto');
 
-Route::get('/reserva', function () {
-    return view('vistas/reserva');
-});
+Route::get('/lista', 'TiendaController@getLista');
+
+Route::get('/reserva', 'TiendaController@getReserva');
 
 Route::get('/create', 'TiendaController@getCreate');
 
