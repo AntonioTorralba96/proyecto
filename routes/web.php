@@ -11,26 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@getHome');
 
-Route::get('/tiendas', function () {
-    return view('vistas/tiendas');
-});
+Route::get('/tiendas', 'TiendaController@getTienda');
 
-Route::get('/productos/{id}', function ($id) {
-    return view('vistas/productos', array('id'=>$id));
-});
+Route::get('/productos/{id}', 'TiendaController@getProducto');
 
 Route::get('/reserva', function () {
     return view('vistas/reserva');
 });
 
-Route::get('/añadir', function () {
-    return view('vistas/añadir');
-});
+Route::get('/create', 'TiendaController@getCreate');
 
-Route::get('/editar/{id}', function ($id) {
-    return view('vistas/editar', array('id'=>$id));
-});
+Route::get('/editar/{id}', 'TiendaController@getEdit');
