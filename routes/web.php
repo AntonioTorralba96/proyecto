@@ -15,12 +15,12 @@ Route::get('/', 'HomeController@getHome');
 
 Route::get('/tiendas', 'TiendaController@getTienda');
 
-Route::get('/productos/{id}', 'TiendaController@getProducto');
+Route::get('/productos/{id}', 'ProductosController@getProducto');
 
-Route::get('/lista', 'TiendaController@getLista');
+Route::get('/lista', 'ListaController@getLista');
 
-Route::get('/reserva', 'TiendaController@getReserva');
+Route::get('/reserva', 'ReservaController@getReserva');
 
-Route::get('/create', 'TiendaController@getCreate');
+Route::get('/create', 'CreateController@getCreate');
 
-Route::get('/editar/{id}', 'TiendaController@getEdit');
+Route::get('/editar/{id}', 'EditController@getEdit');
