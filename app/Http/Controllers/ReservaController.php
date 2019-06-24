@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class ReservaController extends Controller
 {
     //Controlador de la vista Reserva
-    public function getReserva()
+    public function getReserve()
     {
-        return view('vistas.reserva');
+        return view('vistas.reserve');
     }
 }

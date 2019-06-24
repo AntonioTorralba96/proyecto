@@ -13,14 +13,14 @@
 
 Route::get('/', 'HomeController@getHome');
 
-Route::get('/tiendas', 'TiendaController@getTienda');
+Route::get('/shop', 'TiendaController@getShop');
 
-Route::get('/productos/{id}', 'ProductosController@getProducto');
+Route::get('/products/{id}', 'ProductosController@getProduct');
 
-Route::get('/lista', 'ListaController@getLista');
+Route::get('/list', 'ListaController@getList');
 
-Route::get('/reserva', 'ReservaController@getReserva');
+Route::get('/reserve', 'ReservaController@getReserve');
 
 Route::get('/create', 'CreateController@getCreate');
 
-Route::get('/editar/{id}', 'EditController@getEdit');
+Route::get('/edit/{id}', 'EditController@getEdit');

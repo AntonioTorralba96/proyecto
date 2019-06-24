@@ -9,6 +9,6 @@ class EditController extends Controller
     //Controlador de la vista Edit
     public function getEdit($id)
     {
-        return view('vistas.editar', array('id'=>$id));
+        return view('vistas.edit', array('id'=>$id));
     }
 }

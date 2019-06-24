@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class ListaController extends Controller
 {
     //Controlador de la vista Lista
-    public function getLista()
+    public function getList()
     {
-        return view('vistas.lista');
+        return view('vistas.list');
     }
 }

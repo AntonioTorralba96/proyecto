@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class TiendaController extends Controller
 {
     //Controlador de la vista Tiendas
-    public function getTienda()
+    public function getShop()
     {
-        return view('vistas.tiendas', array('arrayTiendas'=>$this->arrayTiendas));
+        return view('vistas.shop', array('arrayTiendas'=>$this->arrayTiendas));
     }
 
     //Base de datos provisional de la vista Tiendas

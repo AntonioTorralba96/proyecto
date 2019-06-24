@@ -20,7 +20,7 @@
 
         </div>
         @endforeach
-        <a href="{{url('/lista')}}">
+        <a href="{{url('/list')}}">
             <button type="button" class="btn btn-primary">Finalizar Pedido</button></a>
     </div>
 

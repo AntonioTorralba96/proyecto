@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class ProductosController extends Controller
 {
     //Controlador de la vista Productos
-    public function getProducto($id)
+    public function getProduct($id)
     {
-        return view('vistas.productos', array('arrayProductos'=>$this->arrayProductos));
+        return view('vistas.products', array('arrayProductos'=>$this->arrayProductos));
     }
 
     //Base de datos provisional de la vista Productos
