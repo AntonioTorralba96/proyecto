@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductosController extends Controller
+class ProductController extends Controller
 {
     //Controlador de la vista Productos
     public function getProduct($id)

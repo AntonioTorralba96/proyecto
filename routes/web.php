@@ -13,13 +13,13 @@
 
 Route::get('/', 'HomeController@getHome');
 
-Route::get('/shop', 'TiendaController@getShop');
+Route::get('/shop', 'ShopController@getShop');
 
-Route::get('/products/{id}', 'ProductosController@getProduct');
+Route::get('/products/{id}', 'ProductController@getProduct');
 
-Route::get('/list', 'ListaController@getList');
+Route::get('/list', 'ListController@getList');
 
-Route::get('/reserve', 'ReservaController@getReserve');
+Route::get('/reserve', 'ReserveController@getReserve');
 
 Route::get('/create', 'CreateController@getCreate');
 
