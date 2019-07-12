@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TiendaController extends Controller
+class ShopController extends Controller
 {
     //Controlador de la vista Tiendas
     public function getShop()
