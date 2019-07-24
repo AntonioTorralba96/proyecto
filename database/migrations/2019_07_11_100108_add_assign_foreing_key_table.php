@@ -14,7 +14,7 @@ class AddAssignForeingKeyTable extends Migration
     public function up()
     {
         Schema::table('product_shop', function (Blueprint $table) {
-            $table->foreign('shop_id')->references('id')->on('shops');
+            //$table->foreign('shop_id')->references('id')->on('shops');
             $table->foreign('product_id')->references('id')->on('products');
         });
     }

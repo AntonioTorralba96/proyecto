@@ -15,7 +15,7 @@ class CreateProductShopTable extends Migration
     {
         Schema::create('product_shop', function (Blueprint $table) {
             $table->bigInteger('product_id')->unsigned();
-            $table->bigInteger('shop_id')->unsigned();
+            //$table->bigInteger('shop_id')->unsigned();
             $table->timestamps();
         });
     }
