@@ -14,9 +14,9 @@ class AddAssignForeignKeyTable extends Migration
     public function up()
     {
         Schema::table('reserve', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
+            //$table->foreign('user_id')->references('id')->on('users');
             //$table->foreign('shop_id')->references('id')->on('shops');
-            $table->foreign('product_id')->references('id')->on('products');
+            //$table->foreign('product_id')->references('id')->on('products');
         });
     }
 

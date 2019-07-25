@@ -20,9 +20,9 @@ class CreateReserveTable extends Migration
             $table->string('direction');
             $table->string('town/city');
             $table->string('postal code');
-            $table->bigInteger('user_id')->unsigned();
+            //$table->bigInteger('user_id')->unsigned();
             //$table->bigInteger('shop_id')->unsigned();
-            $table->bigInteger('product_id')->unsigned();
+            //$table->bigInteger('product_id')->unsigned();
             $table->timestamps();
         });
     }

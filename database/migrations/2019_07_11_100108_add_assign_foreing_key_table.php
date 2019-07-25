@@ -14,7 +14,7 @@ class AddAssignForeingKeyTable extends Migration
     public function up()
     {
         Schema::table('product_shop', function (Blueprint $table) {
-            //$table->foreign('shop_id')->references('id')->on('shops');
+            $table->foreign('shop_id')->references('id')->on('shops');
             $table->foreign('product_id')->references('id')->on('products');
         });
     }
@@ -27,7 +27,8 @@ class AddAssignForeingKeyTable extends Migration
     public function down()
     {
         Schema::table('product_shop', function (Blueprint $table) {
-            //
+            $table->dropForeign('product_shop_shop_id_foreign');
+            $table->dropForeign('product_shop_product_id_foreign');
         });
     }
 }
