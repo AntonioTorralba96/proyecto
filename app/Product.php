@@ -8,5 +8,8 @@ class Product extends Model
 {
     protected $table = "products";
 
-    //protected $fillable = ['name'];
+    public function shops()
+    {
+        return $this->belongsToMany(Shop::class)->withTimestamps('created_at', 'updated_at');
+    }
 }
