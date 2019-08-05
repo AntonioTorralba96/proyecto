@@ -11,22 +11,29 @@
 |
 */
 
+Route::group(['middleware' => 'auth'],function (){
+
+    Route::get('/reserve', 'ReserveController@getReserve');
+
+    Route::get('/createProduct', 'CreateProductController@getCreate');
+    
+    Route::post('/createProduct', 'CreateProductController@postCreate');
+    
+    Route::get('/createShop', 'CreateShopController@getCreate');
+    
+    Route::post('/createShop', 'CreateShopController@postCreate');
+    
+    Route::get('/edit/{id}', 'EditController@getEdit');
+
+});
+
 Route::get('/', 'HomeController@getHome');
 
 Route::get('/shop', 'ShopController@getShop');
 
 Route::get('/products/{id}', 'ProductController@getProduct');
 
-Route::get('/list', 'ListController@getList');
 
-Route::get('/reserve', 'ReserveController@getReserve');
+Auth::routes();
 
-Route::get('/createProduct', 'CreateProductController@getCreate');
-
-Route::post('/createProduct', 'CreateProductController@postCreate');
-
-Route::get('/createShop', 'CreateShopController@getCreate');
-
-Route::post('/createShop', 'CreateShopController@postCreate');
-
-Route::get('/edit/{id}', 'EditController@getEdit');
+Route::get('/home', 'HomeController@index')->name('home');

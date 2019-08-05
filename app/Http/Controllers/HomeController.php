@@ -4,15 +4,32 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Shop;
-use App\Product;
 
 class HomeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('shop');
+    }
+
     public function getHome()
     {
-        //$product= Shop::find(2)->products;
-        //$shop= Product::find(1)->shops;
-        //return $product;
-        return view('index');
+        $arrayShop = Shop::all();
+		return view('vistas.shop', array('arrayShop'=>$arrayShop));
     }
 }

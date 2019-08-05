@@ -15,6 +15,7 @@
                             Tiendas
                         </a>
                     </li>
+                    @if( Auth::check() )
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
                         <a class="nav-link" href="{{url('/reserve')}}">
                             Nueva reserva
@@ -30,8 +31,23 @@
                             <span>&#10010</span> Nueva producto
                         </a>
                     </li>
+                   @endif 
                 </ul>
 
+                @if( !Auth::check() )
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <form action="{{ url('/login') }}" method="GET">
+                            {{ csrf_field() }}
+                            <button type="submit" class="btn btn-link nav-link" style="display:inline;cursor:pointer">
+                                Iniciar Sesión
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+                @endif               
+                @if( Auth::check() )
+                
                 <ul class="navbar-nav navbar-right">
                     <li class="nav-item">
                         <form action="{{ url('/logout') }}" method="POST" style="display:inline">
@@ -42,6 +58,7 @@
                         </form>
                     </li>
                 </ul>
+                @endif 
             </div>
         @endif
     </div>
