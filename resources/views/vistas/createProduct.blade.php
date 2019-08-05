@@ -10,7 +10,7 @@
             </div>
             <div class="card-body" style="padding:30px">
 
-                <form action="{{ url('vistas/create') }}" method="POST">
+                <form action="{{ url('/createProduct') }}" method="POST">
 
                     @csrf
 
@@ -21,12 +21,12 @@
 
                     <div class="form-group">
                     <label for="title">Precio</label>
-                    <input type="number" name="number" id="number" class="form-control">
+                    <input type="number" name="price" id="price" class="form-control">
                     </div>
 
                     <div class="form-group">
-                    <label for="descripcion">Descripción</label>
-                    <textarea name="descripcion" id="descripcion" class="form-control" rows="3"></textarea>
+                    <label for="description">Descripción</label>
+                    <textarea name="description" id="description" class="form-control" rows="3"></textarea>
                     </div>
 
                     <div class="form-group text-center">

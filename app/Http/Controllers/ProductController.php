@@ -11,6 +11,6 @@ class ProductController extends Controller
     public function getProduct($id)
     {
       $arrayProducts = Product::all(); 
-      return view('vistas.products', array('arrayProducts'=>$arrayProducts));
+      return view('vistas.products', compact('arrayProducts'));
     }
 }

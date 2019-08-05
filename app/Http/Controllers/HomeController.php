@@ -10,9 +10,9 @@ class HomeController extends Controller
 {
     public function getHome()
     {
-        $product= Shop::find(2)->products;
-        $shop= Product::find(1)->shops;
-        return $product;
-        //return view('index');
+        //$product= Shop::find(2)->products;
+        //$shop= Product::find(1)->shops;
+        //return $product;
+        return view('index');
     }
 }

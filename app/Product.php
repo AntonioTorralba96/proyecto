@@ -10,6 +10,6 @@ class Product extends Model
 
     public function shops()
     {
-        return $this->belongsToMany(Shop::class)->withTimestamps('created_at', 'updated_at');
+        return $this->belongsToMany(Shop::class);
     }
 }

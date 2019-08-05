@@ -21,6 +21,12 @@ Route::get('/list', 'ListController@getList');
 
 Route::get('/reserve', 'ReserveController@getReserve');
 
-Route::get('/create', 'CreateController@getCreate');
+Route::get('/createProduct', 'CreateProductController@getCreate');
+
+Route::post('/createProduct', 'CreateProductController@postCreate');
+
+Route::get('/createShop', 'CreateShopController@getCreate');
+
+Route::post('/createShop', 'CreateShopController@postCreate');
 
 Route::get('/edit/{id}', 'EditController@getEdit');
