@@ -19,7 +19,8 @@ class CreateProductController extends Controller
         DB::table('products')->insert([
             'name' => $request->name,
             'price' => $request->price,
-            'description' => $request->description
+            'description' => $request->description,
+            'shop_id' => $request->idShop
         ]);
         
         return redirect('/shop');

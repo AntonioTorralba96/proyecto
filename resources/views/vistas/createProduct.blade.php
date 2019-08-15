@@ -15,6 +15,11 @@
                     @csrf
 
                     <div class="form-group">
+                    <label for="title">Id Tienda</label>
+                    <input type="number" name="idShop" id="idShop" class="form-control">
+                    </div>
+
+                    <div class="form-group">
                     <label for="title">Nombre</label>
                     <input type="text" name="name" id="name" class="form-control">
                     </div>

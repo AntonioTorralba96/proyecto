@@ -15,10 +15,16 @@ class UsersTableSeeder extends Seeder
         factory(App\User::class, 29)->create();
 
         DB::table('users')->insert([
-            'name' => 'Usuario1',
-            'email' => 'usuario1@gmail.com',
-            'password' => bcrypt('alumno'),
+            'name' => 'Admin1',
+            'email' => 'admin1@gmail.com',
+            'password' => bcrypt('admin'),
             'type'=> 'admin'
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Owner1',
+            'email' => 'owner1@gmail.com',
+            'password' => bcrypt('owner'),
+            'type'=> 'owner'
         ]);
     }
 }

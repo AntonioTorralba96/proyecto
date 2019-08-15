@@ -13,24 +13,27 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
       DB::table('products')->insert([
-            'name' => 'Tarda',
+            'name' => 'Tarta',
             'price' => '3,90€',
             'shop_id' => '1'
       ]);
 
       DB::table('products')->insert([
             'name' => 'Vestido Azul',
-            'price' => '5€'
-      ]);
-
-      DB::table('products')->insert([
-            'name' => 'Arroz en Bolsa',
-            'price' => '1€'
+            'price' => '5€',
+            'shop_id' => '2'
       ]);
 
       DB::table('products')->insert([
             'name' => 'Bombilla',
-            'price' => '1,50€'
+            'price' => '1,50€',
+            'shop_id' => '3'
+      ]);
+
+      DB::table('products')->insert([
+            'name' => 'Arroz en Bolsa',
+            'price' => '1€',
+            'shop_id' => '4'
       ]);
 
     }
