@@ -14,7 +14,8 @@ class ProductsTableSeeder extends Seeder
     {
       DB::table('products')->insert([
             'name' => 'Tarda',
-            'price' => '3,90€'
+            'price' => '3,90€',
+            'shop_id' => '1'
       ]);
 
       DB::table('products')->insert([
