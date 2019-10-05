@@ -34,6 +34,11 @@
                     <textarea name="description" id="description" class="form-control" rows="3"></textarea>
                     </div>
 
+                    <div class="form-group">
+                    <label for="title">Imagen Producto</label>
+                    <input type="text" name="poster" id="poster" class="form-control">
+                    </div>
+
                     <div class="form-group text-center">
                     <button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
                         Añadir Producto

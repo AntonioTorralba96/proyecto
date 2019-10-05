@@ -21,7 +21,8 @@ class CreateShopController extends Controller
             'category' => $request->category,
             'location' => $request->location,
             'telephone' => $request->telephone,
-            'website' => $request->website
+            'website' => $request->website,
+            'poster' => $request->poster
         ]);
         
         return redirect('/shop');

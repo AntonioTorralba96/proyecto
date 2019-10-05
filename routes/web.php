@@ -25,6 +25,8 @@ Route::group(['middleware' => 'auth'],function (){
     
     Route::get('/edit/{id}', 'EditController@getEdit');
 
+    Route::get('/list', 'ListController@getList');
+
 });
 
 Route::get('/', 'HomeController@getHome');
@@ -32,6 +34,8 @@ Route::get('/', 'HomeController@getHome');
 Route::get('/shop', 'ShopController@getShop');
 
 Route::get('/products/{id}', 'ProductController@getProduct');
+
+Route::get('/details/{id}', 'DetailsController@getDetail');
 
 
 Auth::routes();

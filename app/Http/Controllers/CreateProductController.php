@@ -20,7 +20,8 @@ class CreateProductController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'description' => $request->description,
-            'shop_id' => $request->idShop
+            'shop_id' => $request->idShop,
+            'poster' => $request->poster
         ]);
         
         return redirect('/shop');

@@ -20,6 +20,7 @@ class CreateShopsTable extends Migration
             $table->string('location')->nullable();
             $table->string('telephone')->nullable();
             $table->string('website')->nullable();
+            $table->string('poster')->default("https://img.freepik.com/vector-gratis/tienda-dibujos-animados-compras_18591-42797.jpg?size=338&ext=jpg");
             $table->timestamps();
         });
     }

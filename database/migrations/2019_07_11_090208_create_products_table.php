@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->string('price');
             $table->text('description')->nullable();
             $table->boolean('available')->default(true);
+            $table->integer('quantity')->nullable();
+            $table->string('poster')->default("https://cdn.shopify.com/s/files/1/0229/0839/files/Untitled_design__1.png?2393");
             $table->timestamps();
         });
 
