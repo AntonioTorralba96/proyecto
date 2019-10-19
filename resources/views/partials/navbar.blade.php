@@ -44,6 +44,14 @@
                             </button>
                         </form>
                     </li>
+                    <li class="nav-item">
+                        <form action="{{ url('/register') }}" method="GET">
+                            {{ csrf_field() }}
+                            <button type="submit" class="btn btn-link nav-link" style="display:inline;cursor:pointer">
+                                Registrate
+                            </button>
+                        </form>
+                    </li>
                 </ul>
                 @endif               
                 @if( Auth::check() )
