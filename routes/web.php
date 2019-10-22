@@ -15,21 +15,28 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::get('/reserve', 'ReserveController@getReserve');
 
-    Route::get('/createProduct', 'CreateProductController@getCreate');
+    Route::get('/createProduct', function () {
+        $user = Auth::user()->role_id;
+        //var_dump($user);
+        if($user == 1 || $user == 2 ){
+            return view('vistas/createProduct');
+        }else{
+            return view('vistas/error');
+        }
+    }
+    
+    );
     
     Route::post('/createProduct', 'CreateProductController@postCreate');
     
     Route::get('/createShop', function () {
         $user = Auth::user()->role_id;
         //var_dump($user);
-        if($user == 1){
+        if($user == 1 || $user == 2){
             return view('vistas/createShop');
         }else{
-            //return view('vistas/Error');
-            return 'comida ana';
+            return view('vistas/error');
         }
-        
-        //return 'CreateShopController@getCreate';
     }
     
     );

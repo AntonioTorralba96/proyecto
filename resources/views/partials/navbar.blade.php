@@ -21,7 +21,7 @@
                             Nueva reserva
                         </a>
                     </li>
-                    @if( Auth::user()->role_id == 1 )
+                    @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
                         <a class="nav-link" href="{{url('/createShop')}}">
                             <span>&#10010</span> Nueva tienda
@@ -32,6 +32,7 @@
                             <span>&#10010</span> Nueva producto
                         </a>
                     </li>
+                    @endif
                    @endif 
                 </ul>
 
@@ -54,7 +55,7 @@
                         </form>
                     </li>
                 </ul>
-                @endif
+                
                 @endif               
                 @if( Auth::check() )
                 
