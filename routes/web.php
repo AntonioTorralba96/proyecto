@@ -19,7 +19,20 @@ Route::group(['middleware' => 'auth'],function (){
     
     Route::post('/createProduct', 'CreateProductController@postCreate');
     
-    Route::get('/createShop', 'CreateShopController@getCreate');
+    Route::get('/createShop', function () {
+        $user = Auth::user()->role_id;
+        //var_dump($user);
+        if($user == 1){
+            return view('vistas/createShop');
+        }else{
+            //return view('vistas/Error');
+            return 'comida ana';
+        }
+        
+        //return 'CreateShopController@getCreate';
+    }
+    
+    );
     
     Route::post('/createShop', 'CreateShopController@postCreate');
     
@@ -31,6 +44,11 @@ Route::group(['middleware' => 'auth'],function (){
 
 Route::get('/', 'HomeController@getHome');
 
+// Route::get('/user', function () {
+//     $user = Auth::user()->role_id;
+//     var_dump($user);
+//     return 'hello';
+// });
 Route::get('/shop', 'ShopController@getShop');
 
 Route::get('/products/{id}', 'ProductController@getProduct');
