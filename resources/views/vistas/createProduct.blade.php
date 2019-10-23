@@ -15,8 +15,15 @@
                     @csrf
                     <?php $user = Auth::user()->shop_id;  ?>
                     <div class="form-group">
+                    
+                    @if(Auth::user()->role_id ==1)
                     <label for="title">Id Tienda</label>
-                    <input type="number" name="idShop" id="idShop" class="form-control" value="<?php echo $user;?>"  readonly>
+                    <input type="number" name="idShop" id="idShop" class="form-control" >
+                    @endif
+                    @if(Auth::user()->role_id ==2)
+                    <!-- <label for="title">Id Tienda</label> -->
+                    <input type="hidden" name="idShop" id="idShop" class="form-control" value="<?php echo $user;?>"  readonly>
+                    @endif
                     </div>
                     <div class="form-group">
                     <label for="title">Nombre</label>
