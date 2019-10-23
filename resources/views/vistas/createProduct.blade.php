@@ -13,12 +13,11 @@
                 <form action="{{ url('/createProduct') }}" method="POST">
 
                     @csrf
-
+                    <?php $user = Auth::user()->shop_id;  ?>
                     <div class="form-group">
                     <label for="title">Id Tienda</label>
-                    <input type="number" name="idShop" id="idShop" class="form-control">
+                    <input type="number" name="idShop" id="idShop" class="form-control" value="<?php echo $user;?>"  readonly>
                     </div>
-
                     <div class="form-group">
                     <label for="title">Nombre</label>
                     <input type="text" name="name" id="name" class="form-control">
