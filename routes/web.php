@@ -24,9 +24,7 @@ Route::group(['middleware' => 'auth'],function (){
         }else{
             return view('vistas/error');
         }
-    }
-    
-    );
+    });
     
     Route::post('/createProduct', 'CreateProductController@postCreate');
     
@@ -38,13 +36,13 @@ Route::group(['middleware' => 'auth'],function (){
         }else{
             return view('vistas/error');
         }
-    }
-    
-    );
+    });
     
     Route::post('/createShop', 'CreateShopController@postCreate');
     
     Route::get('/edit/{id}', 'EditController@getEdit');
+
+    Route::post('/edit/{id}', 'EditController@postEdit');
 
     Route::get('/list', 'ListController@getList');
 
