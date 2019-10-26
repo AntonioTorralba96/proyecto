@@ -48,6 +48,8 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::get('/list', 'ListController@getList');
 
+    Route::get('/listUsers', 'ListUsersController@getListUsers');
+
 });
 
 Route::get('/', 'HomeController@getHome');
