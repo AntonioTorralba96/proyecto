@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 
-class EditController extends Controller
+class EditProductController extends Controller
 {
     //Controlador de la vista Edit
     public function getEdit($id)
     {
         $arrayProductos= Product::findOrFail($id);
-        return view('vistas.edit', array('producto'=>$arrayProductos));
+        return view('vistas.editProduct', array('producto'=>$arrayProductos));
     }
 
     public function postEdit(Request $request, $id)

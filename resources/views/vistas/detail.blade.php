@@ -15,7 +15,7 @@
             <h4 >{{$producto->name}}</h4>
             <h6>{{$producto->price}}</h6>
             <h6>{{$producto->description}}</h6>
-            <a href="{{ url('/edit/' . $producto->id ) }}">
+            <a href="{{ url('/editProduct/' . $producto->id ) }}">
                 <button type="button" class="btn btn-warning">Editar</button></a>
         </div>
 

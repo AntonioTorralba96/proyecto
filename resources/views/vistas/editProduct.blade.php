@@ -10,7 +10,7 @@
             </div>
             <div class="card-body" style="padding:30px">
 
-                <form action="{{ url('/edit/'. $producto->id) }}" method="POST">
+                <form action="{{ url('/editProduct/'. $producto->id) }}" method="POST">
 
                     {{method_field('post')}}
 
