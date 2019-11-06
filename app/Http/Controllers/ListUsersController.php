@@ -9,7 +9,7 @@ class ListUsersController extends Controller
 {
     public function getListUsers()
     {
-      $arrayUsers = DB::table('users')->select('name','role_id')->get();
+      $arrayUsers = DB::table('users')->select('id','name','role_id')->get();
 
       return view('vistas.listUsers', ['arrayUsers' => $arrayUsers]);
     }

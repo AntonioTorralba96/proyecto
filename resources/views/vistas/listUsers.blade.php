@@ -14,8 +14,14 @@
         @foreach( $arrayUsers as $listUsers )
         <tr>
             <th>{{$listUsers->name}}</th>
-            <th>{{$listUsers->role_id}}</th>
-            <th><a href="{{url('#')}}">
+            @if($listUsers->role_id == 1)
+            <th>Admin</th>
+            @elseif($listUsers->role_id == 2)
+            <th>Propietario</th>
+            @elseif($listUsers->role_id == 3)
+            <th>Usuario</th>
+            @endif
+            <th><a href="{{url('/editUser/' .$listUsers->id)}}">
                 <button type="button" class="btn btn-primary">Editar</button>
                 </a>
             </th>

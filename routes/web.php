@@ -40,9 +40,13 @@ Route::group(['middleware' => 'auth'],function (){
     
     Route::post('/createShop', 'CreateShopController@postCreate');
     
-    Route::get('/edit/{id}', 'EditController@getEdit');
+    Route::get('/editProduct/{id}', 'EditProductController@getEdit');
 
-    Route::post('/edit/{id}', 'EditController@postEdit');
+    Route::post('/editProduct/{id}', 'EditProductController@postEdit');
+
+    Route::get('/editUser/{id}', 'EditUserController@getEditUser');
+
+    Route::put('/editUsers/{id}', 'EditUserController@putEditUsers');
 
     Route::get('/list', 'ListController@getList');
 
