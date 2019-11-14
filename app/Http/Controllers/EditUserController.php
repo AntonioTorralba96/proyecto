@@ -15,7 +15,7 @@ class EditUserController extends Controller
 
     public function putEditUsers(Request $request, $id)
     {
-        var_dump($request);
+        //var_dump($request);
         $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->role_id = $request->role;
