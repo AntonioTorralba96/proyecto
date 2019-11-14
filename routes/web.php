@@ -31,7 +31,7 @@ Route::group(['middleware' => 'auth'],function (){
     Route::get('/createShop', function () {
         $user = Auth::user()->role_id;
         //var_dump($user);
-        if($user == 1 || $user == 2){
+        if($user == 1){
             return view('vistas/createShop');
         }else{
             return view('vistas/error');
