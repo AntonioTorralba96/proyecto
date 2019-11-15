@@ -29,6 +29,10 @@
                     </select>
                     </div>
                     <div class="form-group">
+                    <label for="title">Tienda</label>
+                    <input type="text" name="shop" value="{{ $user->shop_id }}" id="shop" class="form-control">
+                    </div>
+                    <div class="form-group">
                     <label for="title">Email</label>
                     <input type="text" name="email" value="{{ $user->email }}" id="email" class="form-control">
                     </div>

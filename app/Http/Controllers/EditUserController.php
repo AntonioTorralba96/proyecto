@@ -19,6 +19,7 @@ class EditUserController extends Controller
         $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->role_id = $request->role;
+        $user->shop_id= $request->shop;
         $user->email = $request->email;
         $user->save();
         return redirect('listUsers');
