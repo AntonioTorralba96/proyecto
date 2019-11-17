@@ -2,7 +2,26 @@
 
 @section('content')
 
-    Lista de mi Reserva<br>
+    <div class="row">
+        
+        <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+        <h4>Lista de mi Reserva</h4>
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                </tr>
+            @foreach( $arrayLists as $lists )
+                <tr>
+                    <td>{{$lists->name}}</td>
+                    <td>5</td>
+                </tr>
+            @endforeach
+            </table>
+        </div>
+        
+    </div>
+
     <a href="{{url('/reserve')}}">
             <button type="button" class="btn btn-primary">Reservar</button></a>
 
