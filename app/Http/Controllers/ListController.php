@@ -16,4 +16,22 @@ class ListController extends Controller
 
       return view('vistas.list', compact('arrayLists'));
     }
+
+    public function postList($id, $user)
+
+      {
+        DB::table('lists')->insert([
+            'user_id' => $user,
+            'product_id' => $id
+        ]);
+        
+        return redirect('/shop');
+
+      // $arrayLists = DB::table('products')
+      // ->join('lists', 'products.id', '=', 'lists.product_id')
+      // ->where('user_id', $id)
+      // ->get();
+
+      // return view('vistas.list', compact('arrayLists'));
+    }
 }

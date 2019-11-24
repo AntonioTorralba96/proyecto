@@ -18,7 +18,7 @@
                 <h5>{{$producto->price}}<br>
                 Cantidad Diponible: {{$producto->quantity}}</h5>
 
-                <a href="{{url('#')}}">
+                <a href="{{url('/anadir/' . $producto->id. '/user/' . Auth::user()->id)}}">
                     <button type="button" class="btn btn-primary">Añadir a mi Reserva</button></a>
         </div>
         @endforeach
