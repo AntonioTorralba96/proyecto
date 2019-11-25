@@ -10,7 +10,7 @@
             </div>
             <div class="card-body" style="padding:30px">
 
-                <form action="{{ url('vistas/reserva') }}" method="POST">
+                <form action="{{ url('/reserves') }}" method="POST">
 
                     @csrf
 
@@ -40,13 +40,9 @@
                     </div>
 
                     <div class="form-group">
-                    <form action="/action_page.php">
-                    <input type="checkbox" name="vehicle1" value="Bike">Llevar Pedido a Casa
+                    <input type="checkbox" name="vehicle1" id="vehicle1" value="Domicilio">Llevar Pedido a Casa
                     <br>
-                    <input type="checkbox" name="vehicle2" value="Car">Recoger en Tienda 
-                    <br><br>
-                    <input type="submit">
-                    </form> 
+                    <input type="checkbox" name="vehicle1" id="vehicle1" value="Tienda">Recoger en Tienda 
                     </div>
 
                     <div class="form-group text-center">

@@ -19,7 +19,8 @@ class CreateReserveTable extends Migration
             $table->string('number');
             $table->string('direction');
             $table->string('town/city');
-            $table->string('postal code');
+            $table->string('postal_code');
+            $table->string('pick');
             //$table->bigInteger('user_id')->unsigned();
             //$table->bigInteger('shop_id')->unsigned();
             //$table->bigInteger('product_id')->unsigned();
