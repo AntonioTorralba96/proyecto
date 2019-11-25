@@ -16,7 +16,7 @@ class ReserveController extends Controller
 
     public function postReserve(Request $request)
     {
-        DB::table('reserve')->insert([
+        DB::table('reserves')->insert([
             'name' => $request->name,
             'number' => $request->telefono,
             'direction' => $request->direccion,
