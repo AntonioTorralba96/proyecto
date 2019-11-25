@@ -14,6 +14,13 @@ class ReserveController extends Controller
         return view('vistas.reserve');
     }
 
+    public function getallReserve()
+    {
+        $arrayReserves = DB::table('reserves')->get();
+
+      return view('vistas.allReserve', ['arrayReserves' => $arrayReserves]);
+    }
+
     public function postReserve(Request $request)
     {
         //Auth::user()->shop_id;

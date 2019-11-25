@@ -56,6 +56,8 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::post('/reserves', 'ReserveController@postReserve');
 
+    Route::get('/allReserve', 'ReserveController@getallReserve');
+
 });
 
 Route::get('/', 'HomeController@getHome');
