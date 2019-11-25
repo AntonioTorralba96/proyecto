@@ -13,6 +13,7 @@
                 <form action="{{ url('/reserves') }}" method="POST">
 
                     @csrf
+                    <?php $user = Auth::user()->id;  ?>
 
                     <div class="form-group">
                     <label for="title">Nombre y Apellidos</label>
@@ -43,6 +44,11 @@
                     <input type="checkbox" name="vehicle1" id="vehicle1" value="Domicilio">Llevar Pedido a Casa
                     <br>
                     <input type="checkbox" name="vehicle1" id="vehicle1" value="Tienda">Recoger en Tienda 
+                    </div>
+
+                    <div class="form-group">
+                    
+                    <input type="hidden" name="idUser" id="idUser" class="form-control" value="<?php echo $user;?>"  readonly>
                     </div>
 
                     <div class="form-group text-center">
