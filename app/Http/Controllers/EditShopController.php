@@ -21,6 +21,7 @@ class EditShopController extends Controller
         $shop->location = $request->location;
         $shop->telephone = $request->telephone;
         $shop->website = $request->website;
+        $shop->poster = $request->poster;
         $shop->save();
         return redirect('/shop');
 

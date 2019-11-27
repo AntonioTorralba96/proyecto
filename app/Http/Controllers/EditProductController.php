@@ -20,6 +20,8 @@ class EditProductController extends Controller
         $producto->name = $request->name;
         $producto->price = $request->price;
         $producto->description = $request->description;
+        $producto->quantity = $request->quantity;
+        $producto->poster = $request->poster;
         $producto->save();
         return redirect('details/' . $producto->id);
 
