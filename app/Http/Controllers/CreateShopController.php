@@ -27,4 +27,11 @@ class CreateShopController extends Controller
         
         return redirect('/shop');
     }
+
+    public function deleteShop($id)
+    {
+        DB::table('shops')->where('id', $id)->delete();
+        
+        return redirect('/shop');
+    }
 }

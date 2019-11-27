@@ -8,13 +8,13 @@ use App\Product;
 class EditProductController extends Controller
 {
     //Controlador de la vista Edit
-    public function getEdit($id)
+    public function getEditProduct($id)
     {
         $arrayProductos= Product::findOrFail($id);
         return view('vistas.editProduct', array('producto'=>$arrayProductos));
     }
 
-    public function postEdit(Request $request, $id)
+    public function postEditProduct(Request $request, $id)
     {
         $producto = Product::findOrFail($id);
         $producto->name = $request->name;

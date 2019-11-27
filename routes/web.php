@@ -24,6 +24,12 @@ Route::group(['middleware' => 'auth'],function (){
     });
     
     Route::post('/createShop', 'CreateShopController@postCreate');
+
+    Route::get('/deleteShop/{id}', 'CreateShopController@deleteShop');
+
+    Route::get('/editShop/{id}', 'EditShopController@getEditShop');
+
+    Route::post('/editShop/{id}', 'EditShopController@postEditShop');
     
     Route::get('/createProduct', function () {
         $user = Auth::user()->role_id;
@@ -40,9 +46,9 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::get('/deleteProduct/{id}', 'CreateProductController@deleteProduct');
     
-    Route::get('/editProduct/{id}', 'EditProductController@getEdit');
+    Route::get('/editProduct/{id}', 'EditProductController@getEditProduct');
 
-    Route::post('/editProduct/{id}', 'EditProductController@postEdit');
+    Route::post('/editProduct/{id}', 'EditProductController@postEditProduct');
 
     Route::get('/listUsers', 'ListUsersController@getListUsers');
 

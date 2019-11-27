@@ -29,10 +29,11 @@
 
         </div>
         @endforeach
-        <div class="col-xs-6 col-sm-4 col-md-3 text-center">
+        
+    </div><br>
+    <div class="col-xs-6 col-sm-4 col-md-3 text-center">
             <a href="{{url('/list/' . Auth::user()->id)}}">
                 <button type="button" class="btn btn-primary">Finalizar Pedido</button></a>
         </div>
-    </div>
 
 @stop

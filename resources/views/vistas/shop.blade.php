@@ -14,6 +14,13 @@
                     {{$tienda->category}}
                 </h4>
             </a>
+            @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )
+
+                <a href="{{url('/editShop/' .$tienda->id)}}">
+                    <button type="button" class="btn btn-warning">Editar Producto</button></a>
+                <a href="{{url('/deleteShop/' .$tienda->id)}}">
+                    <button type="button" class="btn btn-danger">Eliminar Producto</button></a>
+                @endif
 
         </div>
         @endforeach
