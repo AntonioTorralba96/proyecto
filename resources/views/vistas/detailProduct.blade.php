@@ -6,9 +6,8 @@
             
         <div class="col-sm-6">
 
-            <a href="{{ url('/details/' . $producto->id) }}">
             <img src="{{$producto->poster}}" style="height:300px"/>
-            </a>
+
         </div>
         <div class="col-sm-4">
 

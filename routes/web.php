@@ -70,16 +70,13 @@ Route::group(['middleware' => 'auth'],function (){
 
 Route::get('/', 'HomeController@getHome');
 
-// Route::get('/user', function () {
-//     $user = Auth::user()->role_id;
-//     var_dump($user);
-//     return 'hello';
-// });
 Route::get('/shop', 'ShopController@getShop');
 
 Route::get('/products/{id}', 'ProductController@getProduct');
 
-Route::get('/details/{id}', 'DetailsController@getDetail');
+Route::get('/detailsProduct/{id}', 'DetailsController@getDetailProduct');
+
+Route::get('/detailsShop/{id}', 'DetailsController@getDetailShop');
 
 
 Auth::routes();
