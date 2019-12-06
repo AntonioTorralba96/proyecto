@@ -16,11 +16,13 @@
             <p><b>Localización:</b> {{$shop->location}}</p>
             <p><b>Telefono:</b> {{$shop->telephone}}</p>
             <p>{{$shop->website}}</p>
+            @if(  Auth::check() )       
             @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )
 
                 <a href="{{url('/editShop/' .$shop->id)}}">
                     <button type="button" class="btn btn-warning">Editar Producto</button></a>
-                @endif
+            @endif
+            @endif
         </div>
 
 

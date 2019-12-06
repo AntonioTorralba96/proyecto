@@ -23,7 +23,7 @@ class EditProductController extends Controller
         $producto->quantity = $request->quantity;
         $producto->poster = $request->poster;
         $producto->save();
-        return redirect('details/' . $producto->id);
+        return redirect('detailsProduct/' . $producto->id);
 
     }
 }

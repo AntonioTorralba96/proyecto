@@ -35,6 +35,6 @@ class CreateReserveTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reserve');
+        Schema::dropIfExists('reserves');
     }
 }
