@@ -26,12 +26,17 @@ class ListController extends Controller
         ]);
         
         return redirect('/shop');
+    }
 
-      // $arrayLists = DB::table('products')
-      // ->join('lists', 'products.id', '=', 'lists.product_id')
-      // ->where('user_id', $id)
-      // ->get();
+    public function deleteList($id, $user)
+    { 
+      DB::table('lists')->where('id', $id)->delete();
 
-      // return view('vistas.list', compact('arrayLists'));
+      $arrayLists = DB::table('products')
+      ->join('lists', 'products.id', '=', 'lists.product_id')
+      ->where('user_id', $user)
+      ->get();
+      
+      return view('vistas.list', compact('arrayLists'));
     }
 }

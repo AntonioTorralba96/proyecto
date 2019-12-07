@@ -15,6 +15,9 @@
                 <tr>
                     <td>{{$lists->name}}</td>
                     <td>5</td>
+                    <td>
+                        <a href="{{url('/deleteList/' .$lists->id. '/' .Auth::user()->id)}}">
+                            <button type="button" class="btn btn-danger">Eliminar</button></a></td>
                 </tr>
             @endforeach
             </table>

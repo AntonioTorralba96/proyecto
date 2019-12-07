@@ -60,6 +60,8 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::get('/anadir/{id}/user/{user}', 'ListController@postList');
 
+    Route::get('/deleteList/{id}/{user}', 'ListController@deleteList');
+
     Route::get('/reserve', 'ReserveController@getReserve');
 
     Route::post('/reserves', 'ReserveController@postReserve');
