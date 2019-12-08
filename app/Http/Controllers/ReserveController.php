@@ -31,6 +31,7 @@ class ReserveController extends Controller
             'town/city' => $request->poblacion,
             'postal_code' => $request->codigoPostal,
             'pick' => $request->vehicle1,
+            'status'=>$request->status,
             'user_id' => $request->idUser
         ]);
         

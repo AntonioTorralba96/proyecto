@@ -45,6 +45,10 @@
                     <br>
                     <input type="checkbox" name="vehicle1" id="vehicle1" value="Tienda">Recoger en Tienda 
                     </div>
+                    
+                    <div class="form-group">
+                    <input type="hidden" name="status" id="status" class="form-control" value="1"  readonly>
+                    </div>
 
                     <div class="form-group">
                     

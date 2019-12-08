@@ -62,11 +62,17 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::get('/deleteList/{id}/{user}', 'ListController@deleteList');
 
+    Route::post('/editList/{user}', 'ListController@editList');
+
     Route::get('/reserve', 'ReserveController@getReserve');
 
     Route::post('/reserves', 'ReserveController@postReserve');
 
     Route::get('/allReserve', 'ReserveController@getallReserve');
+
+    Route::get('/endlist/{id}', 'ListController@getendList');
+
+    Route::put('changeStatus/{id}', 'ListController@changeStatus');
 
 });
 
