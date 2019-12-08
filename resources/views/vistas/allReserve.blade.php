@@ -19,7 +19,7 @@
                 <button type="button" class="btn btn-primary">Detalles</button>
                 </a>
             </th>
-
+            @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
             @if($reserve->status)
                 @php
                     $class = "btn btn-success";
@@ -38,6 +38,13 @@
                 <input type="submit"  class="{{$class}}" value="{{$texto}}" />
             </form>
             </th>
+            @elseif (Auth::user()->role_id == 3)
+            <th>
+            <a href="{{url('/deleteReserve/' . $reserve->id)}}">
+                <input type="submit"  class="btn btn-danger" value="Anular Pedido" />
+            </a>
+            </th>
+            @endif
         </tr>
         @endforeach
     </table>

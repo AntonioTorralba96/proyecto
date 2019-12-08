@@ -41,6 +41,13 @@
                         </a>
                     </li>
                     @endif
+                    @if( Auth::user()->role_id == 3 )
+                    <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('/allReserveUser/' .Auth::user()->id)}}">
+                            Reservas
+                        </a>
+                    </li>
+                    @endif
                    @endif 
                 </ul>
 

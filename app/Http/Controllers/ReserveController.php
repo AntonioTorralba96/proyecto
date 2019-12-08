@@ -21,6 +21,22 @@ class ReserveController extends Controller
       return view('vistas.allReserve', ['arrayReserves' => $arrayReserves]);
     }
 
+    public function getallReserveUser($user)
+    {
+        $arrayReserves = DB::table('reserves')
+        ->where('user_id', $user)
+        ->get();
+
+      return view('vistas.allReserve', ['arrayReserves' => $arrayReserves]);
+    }
+
+    public function deleteReserve($id)
+    {
+        DB::table('reserves')->where('id', $id)->delete();
+        
+        return back();
+    }
+
     public function postReserve(Request $request)
     {
         //Auth::user()->shop_id;

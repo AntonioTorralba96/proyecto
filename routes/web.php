@@ -68,7 +68,11 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::post('/reserves', 'ReserveController@postReserve');
 
+    Route::get('/deleteReserve/{id}', 'ReserveController@deleteReserve');
+
     Route::get('/allReserve', 'ReserveController@getallReserve');
+
+    Route::get('/allReserveUser/{user}', 'ReserveController@getallReserveUser');
 
     Route::get('/endlist/{id}', 'ListController@getendList');
 
