@@ -20,7 +20,7 @@
             @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )
 
                 <a href="{{url('/editShop/' .$shop->id)}}">
-                    <button type="button" class="btn btn-warning">Editar Producto</button></a>
+                    <button type="button" class="btn btn-warning">Editar Tienda</button></a>
             @endif
             @endif
         </div>

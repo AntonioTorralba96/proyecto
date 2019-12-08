@@ -23,7 +23,7 @@ class EditShopController extends Controller
         $shop->website = $request->website;
         $shop->poster = $request->poster;
         $shop->save();
-        return redirect('/shop');
+        return redirect('detailsShop/' . $shop->id);
 
     }
 }

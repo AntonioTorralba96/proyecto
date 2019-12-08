@@ -48,7 +48,7 @@
 
                     <div class="form-group text-center">
                     <button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
-                        Editar Producto
+                        Editar Tienda
                     </button>
                     </div>
 

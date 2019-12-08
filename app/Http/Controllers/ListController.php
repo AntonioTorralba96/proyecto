@@ -45,7 +45,7 @@ class ListController extends Controller
             'quantity' => '1'
         ]);
         
-        return redirect('/shop');
+        return back();
     }
 
     public function deleteList($id, $user)
