@@ -8,13 +8,28 @@
     <table>
         <tr>
             <th>Nombre </th>
-            <th>Pick</th>
+            <th>Modo de reparto</th>
+            <th>Estado del Pedido</th>
             <th></th>
         </tr>
         @foreach( $arrayReserves as $reserve )
         <tr>
             <th>{{ $reserve->name }}</th>
             <th>{{ $reserve->pick }}</th>
+            @if( Auth::user()->role_id == 3)
+                @if($reserve->status)
+                    @php
+                        $class = "btn btn-success";
+                        $texto = "Pedido Finalizado";
+                    @endphp
+                @else    
+                    @php
+                        $class = "btn btn-danger";
+                        $texto = "Pedido Pendiente";
+                    @endphp
+                @endif
+            <th>{{$texto}}</th>
+            @endif
             <th><a href="{{url('/endlist/' .$reserve->user_id)}}">
                 <button type="button" class="btn btn-primary">Detalles</button>
                 </a>

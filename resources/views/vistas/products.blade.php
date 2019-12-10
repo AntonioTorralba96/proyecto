@@ -19,9 +19,10 @@
                 <h5>Cantidad Diponible: {{$producto->quantity}}</h5>
                 
                 @if( Auth::check() ) 
+                @if( Auth::user()->role_id == 3)
                 <a href="{{url('/anadir/' . $producto->id. '/user/' . Auth::user()->id)}}">
                     <button type="button" class="btn btn-primary">Añadir a mi Reserva</button></a>
-                @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )
+                @elseif( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 && Auth::user()->shop_id==$producto->shop_id )
 
                 <a href="{{url('/deleteProduct/' . $producto->id)}}">
                     <button type="button" class="btn btn-danger">Eliminar Producto</button></a>
@@ -33,9 +34,11 @@
         
     </div><br>
     @if( Auth::check() ) 
+        @if( Auth::user()->role_id == 3)
     <div class="col-xs-6 col-sm-4 col-md-3 text-center">
             <a href="{{url('/list/' . Auth::user()->id)}}">
                 <button type="button" class="btn btn-primary">Finalizar Pedido</button></a>
         </div>
         @endif
+    @endif
 @stop
