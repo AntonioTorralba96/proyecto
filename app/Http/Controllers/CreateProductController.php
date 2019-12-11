@@ -31,6 +31,6 @@ class CreateProductController extends Controller
     {
         DB::table('products')->where('id', $id)->delete();
         
-        return redirect('/shop');
+        return back();
     }
 }

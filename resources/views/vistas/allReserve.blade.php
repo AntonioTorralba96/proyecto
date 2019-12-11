@@ -6,12 +6,20 @@
     <div class="col-xs-6 col-sm-4 col-md-12">
 
     <table>
+    @if( Auth::user()->role_id == 3)
         <tr>
             <th>Nombre </th>
             <th>Modo de reparto</th>
             <th>Estado del Pedido</th>
             <th></th>
         </tr>
+    @else
+        <tr>
+            <th>Nombre </th>
+            <th>Modo de reparto</th>
+            <th></th>
+        </tr>
+    @endif
         @foreach( $arrayReserves as $reserve )
         <tr>
             <th>{{ $reserve->name }}</th>
@@ -56,7 +64,7 @@
             @elseif (Auth::user()->role_id == 3)
             <th>
             <a href="{{url('/deleteReserve/' . $reserve->id)}}">
-                <input type="submit"  class="btn btn-danger" value="Anular Pedido" />
+                <input type="submit"  class="btn btn-danger" value="Anular" />
             </a>
             </th>
             @endif
