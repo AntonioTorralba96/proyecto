@@ -13,4 +13,11 @@ class ListUsersController extends Controller
 
       return view('vistas.listUsers', ['arrayUsers' => $arrayUsers]);
     }
+
+    public function deleteUsers($id)
+    {
+        DB::table('users')->where('id', $id)->delete();
+        
+        return redirect('/listUsers');
+    }
 }

@@ -56,6 +56,8 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::put('/editUsers/{id}', 'EditUserController@putEditUsers');
 
+    Route::get('/deleteUser/{id}', 'ListUsersController@deleteUsers');
+
     Route::get('/list/{id}', 'ListController@getList');
 
     Route::get('/anadir/{id}/user/{user}', 'ListController@postList');

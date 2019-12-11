@@ -25,6 +25,10 @@
                 <button type="button" class="btn btn-primary">Editar</button>
                 </a>
             </th>
+            <th><a href="{{url('/deleteUser/' .$listUsers->id)}}">
+                <button type="button" class="btn btn-danger">Eliminar Usuario</button>
+                </a>
+            </th>
         </tr>
         @endforeach
     </table>
