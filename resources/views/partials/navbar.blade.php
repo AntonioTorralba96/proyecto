@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="/" style="color:#777"><span style="font-size:15pt">&#9820;</span> Gestion de Pedidos</a>
+        <a class="navbar-brand" href="/" style="color:#777">GEDEPE</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -16,20 +16,35 @@
                         </a>
                     </li>
                     @if( Auth::check() )
+                    @if( Auth::user()->role_id == 1 )
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('/reserve')}}">
-                            Nueva reserva
+                        <a class="nav-link" href="{{url('/listUsers')}}">
+                            Lista de Usuarios
                         </a>
                     </li>
-                    @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
                         <a class="nav-link" href="{{url('/createShop')}}">
                             <span>&#10010</span> Nueva tienda
                         </a>
                     </li>
+                    @endif
+                    @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
                         <a class="nav-link" href="{{url('/createProduct')}}">
                             <span>&#10010</span> Nueva producto
+                        </a>
+                    </li>
+
+                    <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('/allReserve')}}">
+                            Reservas
+                        </a>
+                    </li>
+                    @endif
+                    @if( Auth::user()->role_id == 3 )
+                    <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
+                        <a class="nav-link" href="{{url('/allReserveUser/' .Auth::user()->id)}}">
+                            Reservas
                         </a>
                     </li>
                     @endif

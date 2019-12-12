@@ -14,6 +14,16 @@
                     {{$tienda->category}}
                 </h4>
             </a>
+            <a href="{{url('/detailsShop/' .$tienda->id)}}">
+                    <button type="button" class="btn btn-primary">Detalles</button></a><br>
+
+            @if(  Auth::check() )       
+            @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 &&  Auth::user()->shop_id==$tienda->id)
+
+                <a href="{{url('/deleteShop/' .$tienda->id)}}">
+                    <button type="button" class="btn btn-danger">Eliminar Tienda</button></a>
+            @endif
+            @endif
 
         </div>
         @endforeach

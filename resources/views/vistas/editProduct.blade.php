@@ -10,25 +10,35 @@
             </div>
             <div class="card-body" style="padding:30px">
 
-                <form action="{{ url('vistas/edit'. $id) }}" method="POST">
+                <form action="{{ url('/editProduct/'. $producto->id) }}" method="POST">
 
-                    {{method_field('PUT')}}
+                    {{method_field('post')}}
 
                     @csrf
 
                     <div class="form-group">
                     <label for="title">Nombre</label>
-                    <input type="text" name="name" id="name" class="form-control">
+                    <input type="text" name="name" value="{{ $producto->name }}" id="name" class="form-control">
                     </div>
 
                     <div class="form-group">
                     <label for="title">Precio</label>
-                    <input type="number" name="number" id="number" class="form-control">
+                    <input type="text" name="price" value="{{ $producto->price }}" id="price" class="form-control">
                     </div>
 
                     <div class="form-group">
                     <label for="descripcion">Descripción</label>
-                    <textarea name="descripcion" id="descripcion" class="form-control" rows="3"></textarea>
+                    <textarea name="description" value="" id="description" class="form-control" rows="3">{{ $producto->description }}</textarea>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="title">Cantidad</label>
+                    <input type="number" name="quantity" value="{{ $producto->quantity }}" id="quantity" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="title">Imagen</label>
+                    <input type="text" name="poster" value="{{ $producto->poster }}" id="poster" class="form-control">
                     </div>
 
                     <div class="form-group text-center">

@@ -14,8 +14,8 @@ class AddAssignForeignKeyShopsTable extends Migration
     public function up()
     {
         Schema::table('shops', function (Blueprint $table) {
-            $table->bigInteger('user_id')->unsigned()->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            //$table->bigInteger('user_id')->unsigned()->nullable();
+            //$table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -27,7 +27,7 @@ class AddAssignForeignKeyShopsTable extends Migration
     public function down()
     {
         Schema::table('shops', function (Blueprint $table) {
-            $table->dropForeign('shops_user_id_foreign');
+            //$table->dropForeign('shops_user_id_foreign');
         });
     }
 }

@@ -4,13 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Shop;
 
 class DetailsController extends Controller
 {
-    public function getDetail($id)
+    public function getDetailProduct($id)
     {
         $producto = Product::findOrFail($id);
-        return view('vistas.detail', array('producto' => $producto
+        return view('vistas.detailProduct', array('producto' => $producto
+        ));
+    }
+
+    public function getDetailShop($id)
+    {
+        $shop = Shop::findOrFail($id);
+        return view('vistas.detailShop', array('shop' => $shop
         ));
     }
 }

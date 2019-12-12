@@ -26,4 +26,11 @@ class CreateProductController extends Controller
         
         return redirect('/shop');
     }
+
+    public function deleteProduct($id)
+    {
+        DB::table('products')->where('id', $id)->delete();
+        
+        return back();
+    }
 }
