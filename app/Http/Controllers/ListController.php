@@ -69,10 +69,10 @@ class ListController extends Controller
 
       var_dump($arrayList); ;
 
-      for($i=13; $i<=14; $i++){
+      foreach($arrayList as $list){
         DB::table('lists')
-        ->where('id', $i)
-        ->update(['quantity' => $request->quantity]);
+        ->where('id', $list->id)
+        ->update(['quantity' => $request->quantity[$list->id]]);
       }
       return redirect('/reserve');
       

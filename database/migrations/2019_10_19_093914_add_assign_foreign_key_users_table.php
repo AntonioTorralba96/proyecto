@@ -17,7 +17,7 @@ class AddAssignForeignKeyUsersTable extends Migration
             $table->bigInteger('role_id')->unsigned()->default(3);
             $table->foreign('role_id')->references('id')->on('roles');
             $table->bigInteger('shop_id')->unsigned()->nullable();
-            $table->foreign('shop_id')->references('id')->on('shops');
+            $table->foreign('shop_id')->references('id')->on('shops')->onDelete('cascade');
         });
     }
 

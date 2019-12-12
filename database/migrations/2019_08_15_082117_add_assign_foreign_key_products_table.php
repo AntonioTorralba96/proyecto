@@ -15,7 +15,7 @@ class AddAssignForeignKeyProductsTable extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->bigInteger('shop_id')->unsigned()->nullable();
-            $table->foreign('shop_id')->references('id')->on('shops');
+            $table->foreign('shop_id')->references('id')->on('shops')->onDelete('cascade');
         });
     }
 

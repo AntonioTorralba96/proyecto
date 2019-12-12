@@ -12,7 +12,8 @@
         <div class="col-sm-4">
 
             <h4 >{{$producto->name}}</h4>
-            <h6>{{$producto->price}}</h6>
+            <h6>Precio: {{$producto->price}}€</h6>
+            <h6>Cantidad disponible: {{$producto->quantity}}</h6>
             <h6>{{$producto->description}}</h6>
             @if(  Auth::check() )       
             @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )

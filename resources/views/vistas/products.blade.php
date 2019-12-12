@@ -15,7 +15,7 @@
                     </h4>
                 </a>
                 
-                <h5>{{$producto->price}}</h5>
+                <h5>{{$producto->price}}€</h5>
                 <h5>Cantidad Diponible: {{$producto->quantity}}</h5>
                 
                 @if( Auth::check() ) 

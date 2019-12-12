@@ -47,7 +47,7 @@
                     </div>
                     
                     <div class="form-group">
-                    <input type="hidden" name="status" id="status" class="form-control" value="1"  readonly>
+                    <input type="hidden" name="status" id="status" class="form-control" value="0"  readonly>
                     </div>
 
                     <div class="form-group">

@@ -19,7 +19,7 @@
                     @foreach( $arrayLists as $lists )
                         <tr>
                             <td>{{$lists->name}}</td>
-                            <td><input type="number" name="quantity" value="{{ $lists->quantity }}" id="quantity" class="form-control"></td>
+                            <td><input type="number" name="quantity[{{$lists->id}}]" value="{{ $lists->quantity }}" id="quantity" class="form-control"></td>
                             <td>
                                 <a href="{{url('/deleteList/' .$lists->id. '/' .Auth::user()->id)}}">
                                     <button type="button" class="btn btn-danger">Eliminar</button></a></td>
