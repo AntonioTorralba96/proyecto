@@ -39,12 +39,26 @@ class ListController extends Controller
     public function postList($id, $user)
 
       {
+        
+        $producto = DB::table('lists')->where([
+          ['product_id', '=', $id],
+          ['user_id', '=', $user]])->first();
+          
+      
+      if($producto!=null){
+        DB::table('lists')->where([
+          ['product_id', '=', $id],
+          ['user_id', '=', $user]])->update([
+          'quantity' => $producto->quantity+1 
+      ]);
+      }
+      else{
         DB::table('lists')->insert([
             'user_id' => $user,
             'product_id' => $id,
             'quantity' => '1'
         ]);
-        
+      }
         return back();
     }
 
