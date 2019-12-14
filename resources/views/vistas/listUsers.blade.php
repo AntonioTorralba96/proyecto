@@ -5,10 +5,11 @@
 
     <div class="col-xs-6 col-sm-4 col-md-12">
 
-    <table>
+    <table class="table table-striped">
         <tr>
             <th>Nombre</th>
             <th>Role</th>
+            <th></th>
             <th></th>
         </tr>
         @foreach( $arrayUsers as $listUsers )

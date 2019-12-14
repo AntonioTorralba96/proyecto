@@ -7,7 +7,7 @@
         <div class="col-xs-6 col-sm-4 col-md-3 text-center">
 
                 <h4>Lista de mi Reserva</h4>
-                    <table>
+                    <table class="table table-striped">
                         <tr>
                             <th>Producto</th>
                             <th>Cantidad</th>

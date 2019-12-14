@@ -5,18 +5,20 @@
 
     <div class="col-xs-6 col-sm-4 col-md-12">
 
-    <table>
+    <table class="table table-striped">
     @if( Auth::user()->role_id == 3)
         <tr>
             <th>Nombre </th>
             <th>Modo de reparto</th>
             <th>Estado del Pedido</th>
             <th></th>
+            <th></th>
         </tr>
     @else
         <tr>
             <th>Nombre </th>
             <th>Modo de reparto</th>
+            <th></th>
             <th></th>
         </tr>
     @endif

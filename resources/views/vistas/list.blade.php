@@ -11,10 +11,11 @@
 
                 @csrf
                 <h4>Lista de mi Reserva</h4>
-                    <table>
+                    <table class="table table-striped">
                         <tr>
                             <th>Producto</th>
                             <th>Cantidad</th>
+                            <th></th>
                         </tr>
                     @foreach( $arrayLists as $lists )
                         <tr>

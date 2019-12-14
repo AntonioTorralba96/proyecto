@@ -45,6 +45,10 @@
                     <br>
                     <input type="checkbox" name="vehicle1" id="vehicle1" value="Tienda">Recoger en Tienda 
                     </div>
+
+                    <div class="form-group">
+                    <p>El pago se realizara a través de una transferencia a la cuenta bancaria ES00 1111 2222 3333</p>
+                    </div>
                     
                     <div class="form-group">
                     <input type="hidden" name="status" id="status" class="form-control" value="0"  readonly>
