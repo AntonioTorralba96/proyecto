@@ -17,10 +17,11 @@
             <p><b>Telefono:</b> {{$shop->telephone}}</p>
             <p>{{$shop->website}}</p>
             @if(  Auth::check() )       
-            @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )
+            @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 &&  Auth::user()->shop_id==$shop->id)
 
                 <a href="{{url('/editShop/' .$shop->id)}}">
-                    <button type="button" class="btn btn-warning">Editar Tienda</button></a>
+                    <button type="button" class="btn btn-warning">
+                    <img src="https://img.icons8.com/metro/26/000000/edit.png"></button></a>
             @endif
             @endif
         </div>

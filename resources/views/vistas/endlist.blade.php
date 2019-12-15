@@ -11,13 +11,26 @@
                         <tr>
                             <th>Producto</th>
                             <th>Cantidad</th>
+                            <th>Precio Total</th>
                         </tr>
+                        <?php
+                        $suma=0;
+                        ?>
                     @foreach( $arrayLists as $lists )
                         <tr>
                             <td>{{$lists->name}}</td>
                             <td>{{ $lists->quantity }}</td>
+                            <td>{{ $lists->price}}€</td>
+                            <?php
+                            $suma+=$lists->price;
+                            ?>
                         </tr>
                     @endforeach
+                        <tr>
+                            <td>
+                            <th>Total</th>
+                            <td><?php echo($suma); ?>€</td>
+                        </tr>
                     </table>
                 </div>
             </form>    

@@ -15,7 +15,7 @@ class ProductsTableSeeder extends Seeder
       //Lista de productos de la tienda 1
       DB::table('products')->insert([
             'name' => 'Tarta de Chocolate',
-            'price' => '3,90',
+            'price' => '3.90',
             'description' => 'Masa sablée con una finísima lámina crujiente de chocolate con leche, rellena de un cremoso intenso de chocolate y recubierta con glaseado de chocolate y nata.',
             'quantity' => '7',
             'shop_id' => '1',
@@ -33,7 +33,7 @@ class ProductsTableSeeder extends Seeder
 
       DB::table('products')->insert([
             'name' => 'Napolitana de Chocolate',
-            'price' => '1,50',
+            'price' => '1.50',
             'description' => 'Se trata de un relleno de crema envuelto en una masa de hojaldre, lo que le da su forma rectangular y aplastada.',
             'quantity' => '9',
             'shop_id' => '1',
@@ -72,7 +72,7 @@ class ProductsTableSeeder extends Seeder
       //Lista de productos de la tienda 3
       DB::table('products')->insert([
             'name' => 'Bombilla',
-            'price' => '1,50',
+            'price' => '1.50',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque commodo purus sit amet dui pharetra, nec ornare justo accumsan. Nam pharetra elit vitae venenatis pretium. Etiam eu massa ut ligula egestas volutpat vitae non mi. Vestibulum ut elit eu nunc pharetra ultrices nec sed enim. Pellentesque tellus orci, dapibus ac.',
             'quantity' => '10',
             'shop_id' => '3',

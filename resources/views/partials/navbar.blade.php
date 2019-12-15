@@ -73,7 +73,28 @@
                 
                 @endif               
                 @if( Auth::check() )
-                
+                @if( Auth::user()->role_id == 3 )
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <form action="{{ url('/list/' . Auth::user()->id) }}" method="GET" style="display:inline">
+                            {{ csrf_field() }}
+                            <button type="submit" class="btn btn-link nav-link" style="display:inline;cursor:pointer">
+                            <img src="https://img.icons8.com/wired/30/000000/shopping-cart-loaded.png">
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+                @endif
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <form action="{{ url('/listUsers/' .Auth::user()->id) }}" method="GET" style="display:inline">
+                            {{ csrf_field() }}
+                            <button type="submit" class="btn btn-link nav-link" style="display:inline;cursor:pointer">
+                            <img src="https://img.icons8.com/wired/30/000000/circled-user.png">
+                            </button>
+                        </form>
+                    </li>
+                </ul>
                 <ul class="navbar-nav navbar-right">
                     <li class="nav-item">
                         <form action="{{ url('/logout') }}" method="POST" style="display:inline">

@@ -32,11 +32,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="title">Cantidad</label>
-                    <input type="number" name="quantity" value="{{ $producto->quantity }}" id="quantity" class="form-control">
-                    </div>
-
-                    <div class="form-group">
                     <label for="title">Imagen</label>
                     <input type="text" name="poster" value="{{ $producto->poster }}" id="poster" class="form-control">
                     </div>

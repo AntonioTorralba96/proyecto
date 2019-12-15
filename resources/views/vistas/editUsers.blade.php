@@ -20,18 +20,22 @@
                     <label for="title">Nombre</label>
                     <input type="text" name="name" value="{{ $user->name }}" id="name" class="form-control">
                     </div>
+                    @if( Auth::check() )
+                        @if( Auth::user()->role_id == 1)
                     <div class="form-group">
                     <label for="title">Role</label>
                     <select name="role" value="{{ $user->role_id }}" id="role" class="form-control">
                         <option value="1">Administrador</option>
                         <option value="2">Propietario</option>
-                        <option value="3">Usuario</option>
+                        <option value="3">Cliente</option>
                     </select>
                     </div>
                     <div class="form-group">
                     <label for="title">Tienda</label>
                     <input type="text" name="shop" value="{{ $user->shop_id }}" id="shop" class="form-control">
                     </div>
+                        @endif
+                    @endif
                     <div class="form-group">
                     <label for="title">Email</label>
                     <input type="text" name="email" value="{{ $user->email }}" id="email" class="form-control">

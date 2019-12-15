@@ -16,9 +16,11 @@
             <h6>Cantidad disponible: {{$producto->quantity}}</h6>
             <h6>{{$producto->description}}</h6>
             @if(  Auth::check() )       
-            @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 )
+            @if( Auth::user()->role_id == 1 || Auth::user()->role_id == 2 &&  Auth::user()->shop_id==$producto->shop_id)
             <a href="{{ url('/editProduct/' . $producto->id ) }}">
-                <button type="button" class="btn btn-warning">Editar</button></a>
+                <button type="button" class="btn btn-warning">
+                <img src="https://img.icons8.com/metro/26/000000/edit.png">
+                </button></a>
             @endif
             @endif
         </div>

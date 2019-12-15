@@ -20,14 +20,18 @@
             @elseif($listUsers->role_id == 2)
             <th>Propietario</th>
             @elseif($listUsers->role_id == 3)
-            <th>Usuario</th>
+            <th>Cliente</th>
             @endif
             <th><a href="{{url('/editUser/' .$listUsers->id)}}">
-                <button type="button" class="btn btn-primary">Editar</button>
+                <button type="button" class="btn btn-warning">
+                    <img src="https://img.icons8.com/metro/26/000000/edit.png">
+                </button>
                 </a>
             </th>
             <th><a href="{{url('/deleteUser/' .$listUsers->id)}}">
-                <button type="button" class="btn btn-danger">Eliminar Usuario</button>
+                <button type="button" class="btn btn-danger">
+                    <img src="https://img.icons8.com/metro/26/000000/delete.png">
+                </button>
                 </a>
             </th>
         </tr>

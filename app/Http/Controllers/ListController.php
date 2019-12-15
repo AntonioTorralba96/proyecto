@@ -39,7 +39,9 @@ class ListController extends Controller
     public function postList($id, $user)
 
       {
-        
+        $precio=DB::table('products')->where([
+          ['id', '=', $id]])->first();
+         
         $producto = DB::table('lists')->where([
           ['product_id', '=', $id],
           ['user_id', '=', $user]])->first();
@@ -49,14 +51,15 @@ class ListController extends Controller
         DB::table('lists')->where([
           ['product_id', '=', $id],
           ['user_id', '=', $user]])->update([
-          'quantity' => $producto->quantity+1 
-      ]);
+          'quantity'=>($producto->quantity+1) 
+          ,'price'=>$producto->price+$precio->price]);
       }
       else{
         DB::table('lists')->insert([
             'user_id' => $user,
             'product_id' => $id,
-            'quantity' => '1'
+            'quantity' => '1',
+            'price'=>$precio->price
         ]);
       }
         return back();
@@ -81,7 +84,7 @@ class ListController extends Controller
       ->where('user_id', $user)
       ->get();
 
-      var_dump($arrayList); ;
+      var_dump($arrayList); 
 
       foreach($arrayList as $list){
         DB::table('lists')

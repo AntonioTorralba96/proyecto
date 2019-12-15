@@ -23,7 +23,9 @@
                             <td><input type="number" name="quantity[{{$lists->id}}]" value="{{ $lists->quantity }}" id="quantity" class="form-control"></td>
                             <td>
                                 <a href="{{url('/deleteList/' .$lists->id. '/' .Auth::user()->id)}}">
-                                    <button type="button" class="btn btn-danger">Eliminar</button></a></td>
+                                    <button type="button" class="btn btn-danger">
+                                        <img src="https://img.icons8.com/metro/26/000000/delete.png">
+                                    </button></a></td>
                         </tr>
                     @endforeach
                     </table>
