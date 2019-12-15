@@ -13,6 +13,12 @@ class EditUserController extends Controller
         return view('vistas.editUsers', array('user'=>$arrayUsers));
     }
 
+    public function getEditUser1($id)
+    {
+        $arrayUsers= User::findOrFail($id);
+        return view('vistas.editUser', array('user'=>$arrayUsers));
+    }
+
     public function putEditUsers(Request $request, $id)
     {
         //var_dump($request);
@@ -23,6 +29,18 @@ class EditUserController extends Controller
         $user->email = $request->email;
         $user->save();
         return redirect('listUsers');
+    //     echo("funciono");
+    }
+
+    public function putEditUser(Request $request, $id)
+    {
+        //var_dump($request);
+        $usuario = $request->usuario;
+        $user = User::findOrFail($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+        return redirect('listUsers/' .$usuario);
     //     echo("funciono");
     }
 
